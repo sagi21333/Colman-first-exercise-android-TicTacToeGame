@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="25dp"
         android:text="Tic Tac Toe"
         android:textSize="45sp"
         android:textStyle="bold"
@@ -24,7 +24,7 @@
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="377dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="25dp"
         android:contentDescription="grid of the game"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,6 @@
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="377dp"
-        android:layout_marginTop="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
@@ -109,6 +108,7 @@
                 android:onClick="playerTap"
                 android:padding="20sp"
                 android:tag="5" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -153,12 +153,35 @@
         android:id="@+id/imageStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.094"
+        app:srcCompat="@drawable/xplay" />
+
+    <ImageView
+        android:id="@+id/winLine"
+        android:layout_width="0dp"
+        android:layout_height="377dp"
+        android:layout_marginTop="25dp"
+        android:contentDescription="grid of the game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/empty" />
+
+    <Button
+        android:id="@+id/playAgain"
+        android:layout_width="398dp"
+        android:layout_height="88dp"
+        android:onClick="gameReset"
+        android:text="Play Agagin"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageStatus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
